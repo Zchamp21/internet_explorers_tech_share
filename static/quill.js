@@ -84,6 +84,54 @@ window.addEventListener("load", async function() {
   //   },
   //   theme: 'snow'
   // });
+    
+//   var icons = Quill.import("ui/icons");
+//   icons["clear"] = 'clear';
+//   icons["cutoff"] = 'cutoff';
+//   icons["undo"] = `<svg viewbox="0 0 18 18">
+//   <polygon class="ql-fill ql-stroke" points="6 10 4 12 2 10 6 10"></polygon>
+//   <path class="ql-stroke" d="M8.09,13.91A4.6,4.6,0,0,0,9,14,5,5,0,1,0,4,9"></path>
+// </svg>`;
+//   icons["redo"] = `<svg viewbox="0 0 18 18">
+//   <polygon class="ql-fill ql-stroke" points="12 10 14 12 16 10 12 10"></polygon>
+//   <path class="ql-stroke" d="M9.91,13.91A4.6,4.6,0,0,1,9,14a5,5,0,1,1,5-5"></path>
+// </svg>`;
+// // https://github.com/KillerCodeMonkey/ngx-quill/issues/362
+
+// // icons: https://github.com/quilljs/quill/tree/develop/assets/icons 
+//   var toolbarOptions = [
+//     ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+//     ['undo', 'redo', 'clear'],
+//     ['cutoff']
+//   ];
+
+//   var quill = new Quill('#editor', {
+//     modules: {
+//       toolbar: {
+//         container: toolbarOptions,
+//         handlers: {
+//           undo: function(value) {
+//             this.quill.history.undo();
+//           },
+//           redo: function(value) {
+//             this.quill.history.redo();
+//           },
+//           clear: function(value) {
+//             this.quill.history.clear();
+//           },
+//           cutoff: function(value){
+//             this.quill.history.cutoff();
+//           }
+//         }
+//       },
+//       history: {
+//         delay: 2000,
+//         maxStack: 500,
+//         userOnly: true
+//       },
+//     },
+//     theme: 'snow'
+//   });
   
   // var undoButton = document.querySelector('#undo');
   // undoButton.addEventListener('click', function(event) {
@@ -104,10 +152,15 @@ window.addEventListener("load", async function() {
   // });
 
 
-  // // have questions about cutoff and maxstack
   // var cutoffButton = document.querySelector('#cutoff');
   // cutoffButton.addEventListener('click', function(event) {
   //   event.preventDefault();
   //   quill.history.cutoff();
   // });
+
+
+//reference:
+// https://stackoverflow.com/questions/59555447/how-to-create-undo-redo-buttons-in-quill-js-react-quill
+//  https://github.com/KillerCodeMonkey/ngx-quill/issues/362
+// https://stackoverflow.com/questions/59555447/how-to-create-undo-redo-buttons-in-quill-js-react-quill
 });
