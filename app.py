@@ -16,7 +16,7 @@ def main_page():
     message = form['message']
     
     # Uncomment for the innerHTML example.
-    db.add_message(name, message)
+    # db.add_message(name, message)
 
     return render_template('quill.html', data=message)
   return render_template('quill.html', data=None)

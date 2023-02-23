@@ -23,4 +23,45 @@ window.addEventListener("load", async function() {
   // This sets up an onsubmit event handler for the main form on the /main page.
   let form = document.getElementById("form");
   form.onsubmit = submit_entry;
+
+
+
+    // history
+  // var quill = new Quill('#editor', {
+  //   modules: {
+  //     toolbar: true,
+  //     history: {
+  //       delay: 2000,
+  //       maxStack: 1000,
+  //       userOnly: true
+  //     }
+  //   },
+  //   theme: 'snow'
+  // });
+  
+  // var undoButton = document.querySelector('#undo');
+  // undoButton.addEventListener('click', function(event) {
+  //   event.preventDefault();
+  //   quill.history.undo();
+  // });
+
+  // var redoButton = document.querySelector('#redo');
+  // redoButton.addEventListener('click', function(event) {
+  //   event.preventDefault();
+  //   quill.history.redo();
+  // });
+
+  // var clearButton = document.querySelector('#clear');
+  // clearButton.addEventListener('click', function(event) {
+  //   event.preventDefault();
+  //   quill.history.clear();
+  // });
+
+
+  // // have questions about cutoff and maxstack
+  // var cutoffButton = document.querySelector('#cutoff');
+  // cutoffButton.addEventListener('click', function(event) {
+  //   event.preventDefault();
+  //   quill.history.cutoff();
+  // });
 });
