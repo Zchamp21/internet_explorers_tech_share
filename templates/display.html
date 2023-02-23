@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Quill Data</title>
+        <meta charset="utf-8">
+        <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+        <link href="{{ url_for('static', filename='quill.css') }}" rel="stylesheet">
+        <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+        <script src="{{ url_for('static', filename='quill.js') }}"></script>
+    </head>
+    <body>
+        {% for datum in data %}
+            <div class="datum">
+                <div>
+                    {{ datum['name'] }}: <span class="edits" id="edit{{ datum['id'] }}">Edit</span>
+                </div>
+                <form id="form{{ datum['id'] }}" method="post" style="display: none;">
+                    <input type="hidden" name="hidden" value="{{ datum['id'] }}">
+                    <input type="hidden" id="update{{ datum['id'] }}" name="update">
+                    <div id="editor{{ datum['id'] }}" style="height: 20vh;">
+
+                    </div>
+                    <button type="submit">Update</button>
+                </form>
+                <div>
+                    {{ datum['msg'] | safe }}
+                </div>
+            </div>
+        {% endfor %}
+    </body>
+</html>

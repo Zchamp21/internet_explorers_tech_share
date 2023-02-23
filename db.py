@@ -47,15 +47,15 @@ def get_db_cursor(commit=False):
 
 def add_message(name, message):
   with get_db_cursor(True) as cur:
-    cur.execute('INSERT INTO quill_test (name, message) VALUES (%s, %s);',
+    cur.execute('INSERT INTO quill_data (name, message) VALUES (%s, %s);',
                 (name, message))
     
 def get_messages():
   with get_db_cursor(False) as cur:
-    cur.execute('SELECT * from quill_test order by id asc')
+    cur.execute('SELECT * from quill_data order by id asc')
     return cur.fetchall()
   
 def update_messages(newMessage, id):
   with get_db_cursor(True) as cur:
-    cur.execute('update quill_test set message=%s where id=%s',
+    cur.execute('update quill_data set message=%s where id=%s',
                 (newMessage, id,))

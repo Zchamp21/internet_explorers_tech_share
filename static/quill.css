@@ -1,7 +1,15 @@
-form#form {
-    margin: auto;
+span.edits {
+    color: blue;
 }
 
-div#parentEditor {
-    width: 50%;
+span.edits:hover {
+    cursor: pointer;
+    color: red;
+}
+
+div.datum,
+div#quill_page_data {
+    border: 2px solid;
+    margin: 1em;
+    padding: 1em;
 }
