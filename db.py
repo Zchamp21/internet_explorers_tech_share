@@ -26,8 +26,6 @@ def setup():
 
 @contextmanager
 def get_db_connection():
-  if pool is None:
-      setup()
   try:
     connection = pool.getconn()
     yield connection
