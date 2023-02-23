@@ -3,6 +3,10 @@ import db
 
 app = Flask(__name__)
 
+@app.before_first_request
+def db_setup():
+  db.setup()
+
 @app.route('/', methods=["GET", "POST"])
 @app.route('/main')
 def main_page():
@@ -12,7 +16,7 @@ def main_page():
     message = form['message']
     
     # Uncomment for the innerHTML example.
-    # db.add_message(name, message)
+    db.add_message(name, message)
 
     return render_template('quill.html', data=message)
   return render_template('quill.html', data=None)
