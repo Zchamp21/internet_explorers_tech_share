@@ -1,4 +1,5 @@
 window.addEventListener("load", async function() {
+  // This will show a form with a specified id.
   function show_form(formId) {
     let form = document.getElementById(formId);
     if (form.style.display == "block") {
@@ -8,6 +9,8 @@ window.addEventListener("load", async function() {
     }
   }
 
+  // This will be called to update the contents of the message when
+  // a user is editing a message.
   function submit_update(id, quill) {
     let inputId = "update"+id;
     let hidden_input = document.getElementById(inputId);
