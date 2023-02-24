@@ -23,6 +23,7 @@ my_attributes = {
   'span': ('class', 'style',),
   'pre': ('class', 'spellcheck',),
   'img': ('src',),
+  # 'iframe': ('class', 'frameborder', 'allowfullscreen', 'src'),
 }
 my_settings['attributes'].update(my_attributes)
 
@@ -51,9 +52,10 @@ def main_page():
 
     # Sanitize the message
     message = sanitizer.sanitize(message)
+    print(message)
     
     # Uncomment for the innerHTML example.
-    db.add_message(name, message)
+    # db.add_message(name, message)
 
     return render_template('quill.html', data=message)
   return render_template('quill.html', data=None)
