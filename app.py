@@ -52,10 +52,9 @@ def main_page():
 
     # Sanitize the message
     message = sanitizer.sanitize(message)
-    print(message)
     
     # Uncomment for the innerHTML example.
-    # db.add_message(name, message)
+    db.add_message(name, message)
 
     return render_template('quill.html', data=message)
   return render_template('quill.html', data=None)
