@@ -7,9 +7,22 @@ span.edits:hover {
     color: red;
 }
 
-div.datum,
+div.datum {
+    border: 2px solid;
+    margin: 1em;
+    padding: 1em;
+    height: auto;
+    box-sizing: initial;
+    white-space: normal;
+    line-height: normal;
+}
+
 div#quill_page_data {
     border: 2px solid;
     margin: 1em;
     padding: 1em;
+    height: auto;
+    box-sizing: initial;
+    white-space: normal;
+    line-height: normal;
 }

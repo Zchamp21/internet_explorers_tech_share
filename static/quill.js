@@ -37,15 +37,32 @@ window.addEventListener("load", async function() {
   //   }
   // }
 
+  //! Keep this in here for now in case we want to do keyboard
+  //! bindings. If not, remove this.
+  // var bindings = {
+  //   tab: {
+  //     key: 9,
+  //     handler: function() {
+  //       this.quill.format('indent', '+1');
+  //     }
+  //   }
+  // }
+
   //toolBar for customizations & handlers
   // var quill = new Quill("#editor", {
   //   modules: {
-  //     toolbar: toolbarOptions
+  //     toolbar: toolbarOptions,
+  //     //! Remove this keyboard binding if not using for presentation.
+  //     keyboard: {
+  //       bindings: bindings
+  //     }
   //   },
   //   placeholder: "Enter your message here!",
   //   theme: "snow"
   // });
 
+  // Use this for the basic demo and introduction, and maybe add one or
+  // two more toolbar features.
   var quill = new Quill("#editor", {
     modules: {
       toolbar: [
