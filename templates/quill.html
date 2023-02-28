@@ -2,10 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Test 3</title>
+    <title>Quill Home</title>
+    <!-- These are the quill.js styles and library. -->
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-    <link href="{{ url_for('static', filename='quill.css') }}" rel="stylesheet">
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+    <!-- These are the custom files we created. -->
+    <link href="{{ url_for('static', filename='quill.css') }}" rel="stylesheet">
     <script src="{{ url_for('static', filename='quill.js') }}"></script>
   </head>
   <body>
@@ -13,17 +16,18 @@
       <label for="name">Name: </label>
       <input type="text" id="name" name="name">
 
+      <!-- This is the editor that quill modifies. -->
       <div id="editor" style="height: 50vh;"></div>
 
       <label for="message"></label>
       <input type="hidden" id="message" name="message">
 
       <button type="submit">Submit</button>
-
     </form>
     
     <br>
 
+    <!-- Display the most recent data on the page. -->
     {% if data %}
       <div id="quill_page_data" class="ql-editor">
         {{ data | safe }}

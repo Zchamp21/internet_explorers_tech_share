@@ -1,14 +1,4 @@
 window.addEventListener("load", async function() {
-  // This will show a form with a specified id.
-  function show_form(formId) {
-    let form = document.getElementById(formId);
-    if (form.style.display == "block") {
-      form.style.display = "none";
-    } else {
-      form.style.display = "block";
-    }
-  }
-
   var toolbarOptions = [
     ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
     ['blockquote', 'code-block'],
@@ -21,13 +11,23 @@ window.addEventListener("load", async function() {
 
     [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
     [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-    [ 'link', 'image', 'video'],          // add's image support
+    [ 'link', 'image', 'video'],                      // add's image support
     [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
     [{ 'font': [] }],
     [{ 'align': [] }],
 
     ['clean']                                         // remove formatting button
   ];
+
+  // This will show a form with a specified id.
+  function show_form(formId) {
+    let form = document.getElementById(formId);
+    if (form.style.display == "block") {
+      form.style.display = "none";
+    } else {
+      form.style.display = "block";
+    }
+  }
 
   // This will be called to update the contents of the message when
   // a user is editing a message.
