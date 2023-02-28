@@ -225,7 +225,6 @@ window.addEventListener("load", async function() {
     // hidden_input.value = quill.root.innerHTML;
       
     hidden_input.value = JSON.stringify(quill.getContents());
-    // hidden_input.value = JSON.stringify(quill.getContents().ops);
   }
 
   // This sets up an onsubmit event handler for the main form on the /main page.
