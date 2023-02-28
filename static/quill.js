@@ -52,7 +52,6 @@ window.addEventListener("load", async function() {
   // var quill = new Quill("#editor", {
   //   modules: {
   //     toolbar: toolbarOptions,
-  //     //! Remove this keyboard binding if not using for presentation.
   //     keyboard: {
   //       bindings: bindings
   //     }
