@@ -209,8 +209,17 @@ window.addEventListener("load", async function() {
 
   /*****************************************************
    * Zach's part
-   * This part is for the javascript-flask communication
+   * This part is for javascript-flask communication.
+   * Uncomment the quill var for the example.
   *****************************************************/
+  // var quill = new Quill("#editor", {
+  //   modules: {
+  //     toolbar: toolbarOptions
+  //   },
+  //   placeholder: "Enter your message here!",
+  //   theme: "snow"
+  // });
+
   function submit_entry() {
     let hidden_input = document.getElementById("message");
     // hidden_input.value = quill.root.innerHTML;
