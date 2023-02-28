@@ -11,8 +11,9 @@ For installation and quickstarts, go to this website: https://quilljs.com/
 To run our project, do the following:
   1. run 'pipenv install'
   2. Set up your .env file based on the .env.template file we have provided.
-  3. run 'pipenv run flask run'
-  4. Enjoy!
+  3. Set up your database based on the schema.sql file we have provided.
+  4. run 'pipenv run flask run'
+  5. Enjoy!
 
 Because quill.js gives you the input in raw html, we used the following website to properly sanitize the html: https://pypi.org/project/html-sanitizer/
 By running 'pipenv install', this library will install for you, but the website provides more information on how to use it.
