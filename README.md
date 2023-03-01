@@ -18,3 +18,6 @@ To run our project, do the following:
 Because quill.js gives you the input in raw html, we used the following website to properly sanitize the html: https://pypi.org/project/html-sanitizer/
 By running 'pipenv install', this library will install for you, but the website provides more information on how to use it.
 This website may also provide some useful information about using html_sanitizer: https://stackoverflow.com/questions/55283447/python-html-sanitizer-allow-img-tag
+
+#keybinding resolve issues
+https://github.com/quilljs/quill/issues/790
