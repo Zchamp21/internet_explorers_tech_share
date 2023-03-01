@@ -28,10 +28,10 @@ window.addEventListener("load", async function() {
    * default toolbar that quill uses.
    * Mention class ql-editor in quill.html.
   *****************************************************/ 
-  var quill = new Quill("#editor", {
-    placeholder: "Enter your message here!",
-    theme: "snow"
-  });
+  // var quill = new Quill("#editor", {
+  //   placeholder: "Enter your message here!",
+  //   theme: "snow"
+  // });
 
 
 
@@ -165,8 +165,9 @@ window.addEventListener("load", async function() {
    * Cedric's part
    * This part is for the key bindings part of the 
    * presentation.
+   * metaKey (shortKey) - commandKey for Mac, ctrlKey, shiftKey and altKey
   *****************************************************/
-  // metaKey (shortKey), ctrlKey, shiftKey and altKey
+
   // var bindings = {
   //   tab: {
   //     key: 9,
@@ -175,10 +176,26 @@ window.addEventListener("load", async function() {
   //     }
   //   },
   //   bold: {
+  //     key: 9,     // using tab key
+  //     handler: function(range, context) {
+  //       if (!context.format.bold) {
+  //         this.quill.format('bold', true);
+  //       } else {
+  //         this.quill.format('bold', false);
+  //       }
+        
+  //     }
+  //   },
+  //   bold: {
   //     key: 'M',
   //     shortKey: true,
   //     handler: function(range, context) {
-  //       this.quill.formatText(range, 'bold', true);
+  //       if (!context.format.bold) {
+  //         this.quill.format('bold', true);
+  //       } else {
+  //         this.quill.format('bold', false);
+  //       }
+        
   //     }
   //   },
   //   header: {
@@ -196,7 +213,6 @@ window.addEventListener("load", async function() {
 
   // var quill = new Quill("#editor", {
   //   modules: {
-  //     toolbar: toolbarOptions,
   //     keyboard: {
   //       bindings: bindings
   //     }
