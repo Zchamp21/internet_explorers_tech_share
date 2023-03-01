@@ -38,7 +38,7 @@ window.addEventListener("load", async function() {
   }
 
   // This retrieves the data from the database.
-  let url = "http://localhost:5000/api/messages";
+  let url = "http://127.0.0.1:5000/api/messages";
   let fetchData = await fetch(url);
   let jsonData = await fetchData.json();
   let data = jsonData.data;
