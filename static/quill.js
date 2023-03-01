@@ -28,10 +28,10 @@ window.addEventListener("load", async function() {
    * default toolbar that quill uses.
    * Mention class ql-editor in quill.html.
   *****************************************************/ 
-  // var quill = new Quill("#editor", {
-  //   placeholder: "Enter your message here!",
-  //   theme: "snow"
-  // });
+  var quill = new Quill("#editor", {
+    placeholder: "Enter your message here!",
+    theme: "snow"
+  });
 
 
 
